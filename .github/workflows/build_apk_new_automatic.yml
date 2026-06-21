@@ -37,7 +37,7 @@ jobs:
           export FLET_EXTRA_MODULES=certifi
           flet build apk --verbose --no-rich-output --yes
         env:
-          FLET_ANDROID_SIGNING_KEY_STORE: release.keystore
+          FLET_ANDROID_SIGNING_KEY_STORE: ${{ github.workspace }}/release.keystore
           FLET_ANDROID_SIGNING_KEY_STORE_PASSWORD: "opensource_build_key"
           FLET_ANDROID_SIGNING_KEY_ALIAS: "release-alias"
           FLET_ANDROID_SIGNING_KEY_PASSWORD: "opensource_build_key"
